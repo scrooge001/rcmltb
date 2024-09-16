@@ -64,14 +64,15 @@ from .modules import (
 
 async def start(_, message):
     buttons = ButtonMaker()
-    buttons.url_buildbutton("Repo", "https://github.com/Sam-Max/rcmltb")
-    buttons.url_buildbutton("Owner", "https://github.com/Sam-Max")
+    buttons.url_buildbutton("Repo", "https://t.me/scrooge010")
+    buttons.url_buildbutton("Owner", "https://t.me/scrooge010")
     reply_markup = buttons.build_menu(2)
     if CustomFilters.user_filter or CustomFilters.chat_filter:
         msg = """
-**Hello, ¡Welcome to Rclone-Telegram-Bot!\n
+**Hello, ¡Welcome to Leech Bot!\n
 I can help you copy files from one cloud to another.
-I can also can mirror-leech files and links to Telegram or cloud**\n\n
+I can also can mirror-leech files and links to Telegram or cloud
+Any Reports? Complain @scrooge010**\n\n
         """
         await sendMarkup(msg, message, reply_markup)
     else:
